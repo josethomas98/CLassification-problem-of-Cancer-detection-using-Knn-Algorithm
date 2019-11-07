@@ -13,7 +13,7 @@ def knn(data,predict,k=3):
     d=Counter(vote).most_common(1)[0][0]
     confidence=Counter(vote).most_common(1)[0][1]/k
     return d,confidence
-df=pd.read_csv('C:/Users/Stino Thomas/Desktop/machine learning dataset/breast cancer.txt')
+df=pd.read_csv('breast cancer.txt')
 df.replace('?',-9999,inplace=True)
 df.drop(['id'],1,inplace=True)
 full_data=df.astype(float).values.tolist()
